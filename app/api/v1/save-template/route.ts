@@ -56,6 +56,8 @@ export const POST = async (request: NextRequest) => {
     .single();
 
   if (error) {
+    console.log(error,'error');
+    
     return NextResponse.json(
       {
         type: 'Database error',
