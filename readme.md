@@ -38,6 +38,17 @@ Designing emails that work across all email platforms, browsers, etc is hard. **
 
 <br />
 
+## supabase table setup sql query
+
+  CREATE TABLE mails (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    title VARCHAR(255),
+    content JSONB,
+    user_id UUID,
+    created_at TIMESTAMPTZ DEFAULT now(),
+    updated_at TIMESTAMPTZ
+  );
+
 ## Contributions
 
 Feel free to submit pull requests, create issues, or spread the word. For getting a development version of it up & running, go through the following steps.
